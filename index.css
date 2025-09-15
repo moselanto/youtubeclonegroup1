@@ -240,19 +240,22 @@ img {
   flex-basis: auto;
 }
 
-.component-34-2 {
+/* .component-34-2 {
   flex-grow: 0;
   flex-shrink: 1;
-  flex-basis: auto;
-}
+  flex-basis: auto; 
+} */
 
+.bottom-nav-bar {
+ display: inline-block;
+}
 .text-31 {
   flex-grow: 0;
   flex-shrink: 1;
   flex-basis: auto;
   font-family: var(--font-family-inter);
   font-weight: 700;
-  font-size: 20px;
+  font-size: 50px;
   text-decoration: none;
   text-transform: none;
   color: var(--text-black);
@@ -286,6 +289,7 @@ img {
   flex-grow: 0;
   flex-shrink: 1;
   flex-basis: auto;
+  width: 50%;
 }
 
 .text-35 {
@@ -294,7 +298,7 @@ img {
   flex-basis: auto;
   font-family: var(--font-family-inter);
   font-weight: normal;
-  font-size: 16px;
+  font-size: 32px;
   text-decoration: none;
   text-transform: none;
   color: var(--text-rgb-0-116-181);
@@ -328,18 +332,20 @@ img {
   flex-grow: 0;
   flex-shrink: 1;
   flex-basis: auto;
+  width: 50%;
 }
 
 .videos-29 {
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
-  align-items: flex-end;
+  align-items: center;
   gap: 35px;
   padding: 20px 30px 20px 30px;
-  flex-grow: 0;
+  flex-grow: 1;
   flex-shrink: 1;
-  flex-basis: auto;
+  flex-basis: 0;
+
 }
 
 .text-40 {
@@ -348,7 +354,7 @@ img {
   flex-basis: auto;
   font-family: var(--font-family-inter);
   font-weight: 700;
-  font-size: 20px;
+  font-size: 50px;
   text-decoration: none;
   text-transform: none;
   color: var(--text-black);
@@ -382,6 +388,7 @@ img {
   flex-grow: 0;
   flex-shrink: 1;
   flex-basis: auto;
+  width: 50%;
 }
 
 .text-44 {
@@ -390,7 +397,7 @@ img {
   flex-basis: auto;
   font-family: var(--font-family-inter);
   font-weight: normal;
-  font-size: 16px;
+  font-size: 32px;
   text-decoration: none;
   text-transform: none;
   color: var(--text-rgb-0-116-181);
@@ -424,6 +431,7 @@ img {
   flex-grow: 0;
   flex-shrink: 1;
   flex-basis: auto;
+  width: 50%;
 }
 
 .shorts-38 {
@@ -508,7 +516,7 @@ img {
   margin: 20px 30px 20px 30px;
   flex-grow: 0;
   flex-shrink: 1;
-  width: 85%;
+  width: 97%;
   background-color: rgba(82, 82, 82, 1);
   border-radius: 20px;
 }
@@ -526,6 +534,8 @@ img {
   flex-grow: 0;
   flex-shrink: 1;
   flex-basis: auto;
+  width: 200px;
+  height: auto;
 }
 
 .text-56 {
@@ -534,7 +544,7 @@ img {
   flex-basis: auto;
   font-family: var(--font-family-inter);
   font-weight: 700;
-  font-size: 24px;
+  font-size: 4rem;
   text-decoration: none;
   text-transform: none;
   color: var(--text-black);
@@ -547,6 +557,7 @@ img {
   align-items: center;
   gap: 25px;
   padding: 25px;
+  margin-top: 30px;
   flex-grow: 0;
   flex-shrink: 1;
   flex-basis: auto;
