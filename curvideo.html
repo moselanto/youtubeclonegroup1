@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Video Player - Ytgroupwork</title>
+  <link rel="icon" type="image/png" href="vassets/Favicon.png">
+  <link href="https://fonts.googleapis.com/css?family=Inter&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="curvideo.css">
+  <script src="video.js"></script>
+</head>
+<body>
+  <header class="topbar">
+  <button class="menu-button" id="menuBtn">
+    <img src="vassets/vector-14.svg" alt="Menu" style="width:24px; height:24px; margin-right:12px;">
+  </button>
+  <img class="logo" src="vassets/node-6.png" alt="Logo">
+  <div class="search">
+    <input type="text" placeholder="Search">
+    <button>
+      <img src="vassets/vector-10.svg" alt="Search">
+    </button>
+  </div>
+  <!-- Microphone icon added here -->
+  <button class="mic-btn">
+    <img src="vassets/microphone-vector-icon-logo-on-260nw-1193225659.jpg" alt="Microphone" style="width:30px; height:30px;">
+  </button>
+  <div class="actions">
+    <button><img src="vassets/vector-8.svg" alt="Notifications"></button>
+    <button><img src="vassets/man-user-circle-icon.png" alt="Profile"></button>
+  </div>
+  </header>
+  <nav class="sidebar" id="sidebar">
+    <ul>
+      <li><img src="vassets/vector-62.svg" alt="Home" /><span>Home</span></li>
+      <li><img src="vassets/vector-63.svg" alt="Shorts" /><span>Shorts</span></li>
+      <li><img src="vassets/vector-68.svg" alt="Subscriptions" /><span>Subscriptions</span></li>
+      <li><img src="vassets/vector-79.svg" alt="You" /><span>You</span></li>
+    </ul>
+  </nav>
+  <div class="page-content">
+    <main class="main-content">
+      <section class="video-player-section">
+        <div class="video-player">
+          <div class="video-player-img-container">
+            <img src="vassets/rectangle-13-2.png" alt="Video player" />
+            <button class="play-btn">
+              <img src="vassets/play-button-svgrepo-com.svg" alt="Play" />
+            </button>
+            <button class="arrow-btn prev-btn">
+              <img src="vassets/vector-12.svg" alt="Previous" />
+            </button>
+            <button class="arrow-btn next-btn">
+              <img src="vassets/vector-21.svg" alt="Next" />
+            </button>
+          </div>
+          <div class="video-info">
+            <h1 class="video-title">Penguins Being Penguins for 3 Minutes Straight</h1>
+            <div class="video-meta">
+              <span class="video-author">Ocean Frank</span>
+              <button class="subscribe-btn">Subscribe</button>
+              <div class="video-actions">
+                <button class="like-btn">
+                  <img src="vassets/vector-36.svg" alt="Like" /> Like
+                </button>
+                <button class="dislike-btn">
+                  <img src="vassets/vector-40.svg" alt="Dislike" /> Dislike
+                </button>
+                <button class="share-btn">
+                  <img src="vassets/share-icon-1570728-512.png" alt="Share" /> Share
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="comments-section">
+          <h2>Comments</h2>
+          <div class="comment">Add your comment...</div>
+        </div>
+      </section>
+    </main>
+    <aside class="suggested-videos">
+      <h2>Up next</h2>
+      
+      <!-- Scrollable vertical list of suggestion titles -->
+      <div class="suggestion-titles">
+        <ul>
+          <li>How to Train Your Cat</li>
+          <li>World’s Fastest Roller Coasters</li>
+          <li>Unbelievable Science Experiments</li>
+          <li>Street Food Around the Globe</li>
+          <li>Hidden Gems of Europe</li>
+          <li>Top 10 Movie Plot Twists</li>
+        </ul>
+      </div>
+      
+      <!-- Horizontal shorts slider -->
+      <div class="shorts-slider-container">
+        <button class="shorts-scroll-btn left" id="shortsLeft">&#9664;</button>
+        <div class="shorts-slider" id="shortsSlider">
+          <div class="short">
+            <img src="vassets/rectangle-51-6.png" alt="Short 1" />
+            <div class="short-title">Short 1</div>
+          </div>
+          <div class="short">
+            <img src="vassets/rectangle-96-8.png" alt="Short 2" />
+            <div class="short-title">Short 2</div>
+          </div>
+          <div class="short">
+            <img src="vassets/rectangle-51-6.png" alt="Short 3" />
+            <div class="short-title">Short 3</div>
+          </div>
+          <div class="short">
+            <img src="vassets/rectangle-96-8.png" alt="Short 4" />
+            <div class="short-title">Short 4</div>
+          </div>
+        </div>
+        <button class="shorts-scroll-btn right" id="shortsRight">&#9654;</button>
+      </div>
+
+      <!-- Standard video suggestions list starts here -->
+      <ul class="video-suggestions">
+        <li>
+          <img src="vassets/img-how-train-cat-sit-thumbnail-large.jpg" alt="Suggested 1" />
+          <div>
+            <div class="suggested-title">How to Train Your Cat</div>
+            <div class="suggested-author">by CatMaster</div>
+          </div>
+        </li>
+        <li>
+          <img src="vassets/rollercoaster.jpg" alt="Suggested 2" />
+          <div>
+            <div class="suggested-title">World’s Fastest Roller Coasters</div>
+            <div class="suggested-author">by ThemeParkPro</div>
+          </div>
+        </li>
+        <li>
+          <img src="vassets/science.jpg" alt="Suggested 3" />
+          <div>
+            <div class="suggested-title">Unbelievable Science Experiments</div>
+            <div class="suggested-author">by ScienceLab</div>
+          </div>
+        </li>
+        <li>
+          <img src="vassets/street food.jpg" alt="Suggested 4" />
+          <div>
+            <div class="suggested-title">Street Food Around the Globe</div>
+            <div class="suggested-author">by FoodieTravels</div>
+          </div>
+        </li>
+        <li>
+          <img src="vassets/europe.jpg" alt="Suggested 5" />
+          <div>
+            <div class="suggested-title">Hidden Gems of Europe</div>
+            <div class="suggested-author">by EuroExplorer</div>
+          </div>
+        </li>
+        <li>
+          <img src="vassets/movie.jpg" alt="Suggested 6" />
+          <div>
+            <div class="suggested-title">Top 10 Movie Plot Twists</div>
+            <div class="suggested-author">by FilmBuff</div>
+          </div>
+        </li>
+      </ul>
+    </aside>
+  </div>
+  <button class="arrow-btn next-btn" onclick="window.location.href='nextvideo.html'">
+  <img src="vassets/vector-21.svg" alt="Next" />
+</button>
+
+  <script>
+  const menuBtn = document.getElementById('menuBtn');
+  const sidebar = document.getElementById('sidebar');
+  menuBtn.addEventListener('click', () => {
+    sidebar.classList.toggle('sidebar-open');
+  });
+  document.addEventListener('click', (e) => {
+    if (!sidebar.contains(e.target) && !menuBtn.contains(e.target)) {
+      sidebar.classList.remove('sidebar-open');
+    }
+  });
+</script>
+</body>
+</html>

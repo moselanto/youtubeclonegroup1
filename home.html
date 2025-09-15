@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>YouTube Clone Layout</title>
+  <link rel="icon" type="image/png" href="assets/Favicon.png">
+  <link href="https://fonts.googleapis.com/css?family=Inter&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="home.css">
+ </head>
+<body>
+
+  <!-- Top Bar -->
+<header class="topbar">
+  <a href="Menu" class="menu-button">
+    <img src="assets/vector-4.svg" alt="Menu" style="width:24px; height:24px; margin-right:12px;">
+  </a>
+  <img class="logo" src="assets/node-6.png" alt="Logo">
+  <div class="search">
+    <input type="text" placeholder="Search">
+    <button>
+      <img src="assets/vector-10.svg" alt="Search">
+    </button>
+  </div>
+  <!-- Microphone icon added here -->
+  <div class="actions">
+    <button><img src="assets/vector-8.svg" alt="Notifications"></button>
+    <button><img src="assets/ic-outline-plus-76.svg" alt="Create"></button>
+    <button class="mic-btn">
+      <img src="assets/microphone-vector-icon-logo-on-260nw-1193225659.jpg" alt="Microphone" style="width:30px; height:30px;">
+    </button>
+    <button><img src="assets/man-user-circle-icon.png" alt="Profile"></button>
+  </div>
+</header>
+
+  <div class="layout">
+    <!-- Sidebar (hidden on mobile) -->
+    <aside class="sidebar">
+      <nav>
+        <a href="Home">
+          <img src="assets/Home.svg" alt="Home" style="width:24px; height:24px; display:block; margin:0 auto 4px;">
+          <span>Home</span>
+        </a>
+        <a href="Shorts">
+          <img src="assets/Shorts BW.jpg" alt="Shorts" style="width:30px; height:30px; display:block; margin:0 auto 4px;">
+          <span>Shorts</span>
+        </a>
+        <a href="Subscriptions">
+          <img src="assets/Subscribe.svg" alt="Subscriptions" style="width:24px; height:24px; display:block; margin:0 auto 4px;">
+          <span>Subscriptions</span>
+        </a>
+        <a href="Downloads">
+          <img src="assets/Downloads.svg" alt="Downloads" style="width:24px; height:24px; display:block; margin:0 auto 4px;">
+          <span>Downloads</span>
+        </a>
+      </nav>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="content">
+          <!-- Suggestions Strip -->
+      <div class="suggestions-strip">
+        <button>All</button>
+        <button>Music</button>
+        <button>Gaming</button>
+        <button>News</button>
+        <button>Live</button>
+        <button>Podcasts</button>
+        <button>Mixes</button>
+        <button>Learning</button>
+        <button>Sports</button>
+        <button>Fashion & Beauty</button>
+        <button>Movies & Shows</button>
+      </div>
+
+      <!-- Shorts Section -->
+      <section class="shorts">
+        <header class="shorts-header">
+          <div style="display: flex; align-items: center; gap: 8px;">
+            <img src="assets/youtube-shorts-icon.png" alt="Shorts Icon" style="width:24px; height:24px;">
+            <h2>Shorts</h2>
+          </div>
+        </header>
+
+        <div class="shorts-grid">
+          <a href="How to design" class="short-card">
+            <img src="assets/rectangle-11-55.png" alt="Short video thumbnail">
+            <div class="short-card-text">
+              <h3>How to design your site footer like we did</h3>
+              <p>240 views</p>
+            </div>
+          </a>
+          <a href="Quick Web Design" class="short-card">
+            <img src="assets/rectangle-11-68.png" alt="Short video thumbnail">
+            <div class="short-card-text">
+              <h3>Quick Web Design Tips</h3>
+              <p>980 views</p>
+            </div>
+          </a>
+          <a href="Top 5 Guitar Riffs" class="short-card">
+            <img src="assets/electric-guitar-stage-stockcake.jpg" alt="Short video thumbnail">
+            <div class="short-card-text">
+              <h3>Top 5 Guitar Riffs</h3>
+              <p>3.5k views</p>
+            </div>
+          </a>
+          <a href="Muscle Car Madness" class="short-card">
+            <img src="assets/2016-Dodge-Challenger-SRT-Hellcat-red-back.jpg" alt="Short video thumbnail">
+            <div class="short-card-text">
+              <h3>Muscle Car Madness</h3>
+              <p>4.1k views</p>
+            </div>
+          </a>
+          <a href="#" class="short-card">
+            <img src="assets/vintage-acoustic-guitar-stockcake.jpg" alt="Short video thumbnail">
+            <div class="short-card-text">
+              <h3>Guitar Collection Tour</h3>
+              <p>2.1k views</p> 
+            </div>
+          </a>
+          <a href="Art Time-lapse" class="short-card">
+            <img src="assets/Jed+Celebration+Finished+Painting-1920w.jpg" alt="Short video thumbnail">
+            <div class="short-card-text">
+              <h3>Art Time-lapse</h3>
+              <p>6.3k views</p>
+            </div>
+          </a>
+          <a href="Signal Iduna Park" class="short-card">
+            <img src="assets/Signal Iduna Park.jpg" alt="Short video thumbnail">
+            <div class="short-card-text">
+              <h3>Signal Iduna Park Tifo</h3>
+              <p>49.3k views</p>
+            </div>
+          </a>
+        </div>
+      </section>
+
+      <!-- Videos Feed -->
+        <section class="videos">
+          <a href="Learn Web Design" class="video-card">
+            <img src="assets/video-thumbnail-232.png" alt="Video thumbnail">
+            <div class="video-info">
+              <img src="assets/ellipse-2-234.svg" alt="Channel profile">
+              <div class="video-text">
+                <h3>Learn Web Design in 10 Minutes</h3>
+                <p>Design Academy • 150k views • 2 days ago</p>
+              </div>
+            </div>
+          </a>
+          <a href="Penguins Being Penguins" class="video-card">
+            <img src="assets/rectangle-103-18.png" alt="Video thumbnail">
+            <div class="video-info">
+              <img src="assets/ffc29d135e7e724e2e2c71.32268673_.jpg" alt="Channel profile">
+              <div class="video-text">
+                <h3>Penguins Being Penguins for 3 Minutes Straight</h3>
+                <p>Ocean Frank • 89k views • 1 week ago</p>
+              </div>
+            </div>
+          </a>
+          <a href="Wardrobe Makeover" class="video-card">
+            <img src="assets/rectangle-104-19.png" alt="Video thumbnail">
+            <div class="video-info">
+              <img src="assets/fashion_blog_styling_blog_two-models-min-1024x683.jpg" alt="Channel profile">
+              <div class="video-text">
+                <h3>Wardrobe Makeover - SHEIN Edition</h3>
+                <p>Fashion by Anna • 200k views • 5 days ago</p>
+              </div>
+            </div>
+          </a>
+        </section>
+    </main>
+  
+
+   <!-- Bottom Navigation (mobile only) -->
+  <footer class="bottom-nav">
+    <nav>
+        <a href="#">Home</a>
+        <a href="#">Shorts</a>
+        <a href="#">Subscriptions</a>
+        <a href="#">You</a>
+    </nav>
+  </footer>
+
+</body>
+</html>

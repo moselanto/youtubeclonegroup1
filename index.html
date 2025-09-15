@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>YouTube clone group 1</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <!-- ✅ Add Voice Search + Create Dropdown without removing existing code -->
+  <!-- Topbar -->
+  <div class="topbar">
+    <div class="nav-left">
+      <button class="menu-btn" id="menuBtn">
+        <svg viewBox="0 0 24 24"><path d="M3 6h18v2H3V6zm0 5h18v2H3v-2zm0 5h18v2H3v-2z"/></svg>
+      </button>
+       <div class="logo">
+        <!-- Option 1: Local file -->
+        <img src="images/youtube-logo.png" alt="YouTube" class="logo-img">
+
+        <!-- Option 2: Direct from Wikimedia (no file needed) -->
+        <!-- <img src="https://upload.wikimedia.org/wikipedia/commons/b/b8/YouTube_Logo_2017.svg" alt="YouTube" class="logo-img"> -->
+      </div>
+    </div>
+    <!-- Search bar (only text + search button) -->
+    <div class="search">
+      <input type="text" placeholder="Search" id="searchInput" />
+      <button>
+        <svg viewBox="0 0 24 24">
+          <path d="M15.5 14h-.79l-.28-.27A6.471 6.471 0 0016 9.5 6.5 6.5 0 109.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C8.01 14 6 11.99 6 9.5S8.01 5 10.5 5 15 7.01 15 9.5 12.99 14 10.5 14z"></path>
+        </svg>
+      </button>
+    </div>
+    <!-- Voice search + user actions -->
+    <div class="user-actions">
+      <!-- 🎤 Voice search button -->
+      <button id="voiceBtn" class="voice-btn" title="Search with your voice">🎤</button>
+      <!-- ➕ Create button with dropdown -->
+      <div class="create-dropdown">
+        <svg id="createBtn" viewBox="0 0 24 24">
+          <path d="M12 5v14m-7-7h14" stroke="#606060" stroke-width="2" fill="none" stroke-linecap="round" />
+        </svg>
+        <div class="dropdown-menu" id="dropdownMenu">
+          <a href="#">📹 Upload video</a>
+          <a href="#">🔴 Go live</a>
+          <a href="#">📝 Create post</a>
+        </div>
+      </div>
+      <!-- Notifications + Profile -->
+      <svg viewBox="0 0 24 24"><path d="M12 24c1.1 0 2-.9 2-2h-4a2 2 0 002 2zm6-6V11c0-3.07-1.63-5.64-4.5-6.32V4a1.5 1.5 0 00-3 0v.68C7.63 5.36 6 7.92 6 11v7l-2 2v1h16v-1l-2-2z" /></svg>
+      <img
+        class="profile"
+        src="https://yt3.ggpht.com/yti/ANjgQV8vfw_JjwyHqfdtMnwMKypM4A34Tg3Y9Rk_nUYLhcTKUJ0=s88-c-k-c0x00ffffff-no-rj"
+        alt="Profile"
+      />
+    </div>
+  </div>
+
+  <div class="user-actions">
+    <svg viewBox="0 0 24 24"><path d="M12 24c1.1 0 2-.9 2-2h-4a2 2 0 002 2zm6-6V11c0-3.07-1.63-5.64-4.5-6.32V4a1.5 1.5 0 00-3 0v.68C7.63 5.36 6 7.92 6 11v7l-2 2v1h16v-1l-2-2z" /></svg>
+    <img class="profile" src="https://i.pravatar.cc/40?img=20" alt="Profile" />
+  </div>
+
+  <!-- Compact Sidebar -->
+  <div class="sidebar">
+    <a href="index.html"><span class="icon">🏠</span>Home</a>
+    <a href="shorts.html"><span class="icon">🎬</span> Shorts</a>
+    <a href="#"><span class="icon">📺</span>Subs</a>
+    <a href="#"><span class="icon">📚</span>Library</a>
+  </div>
+
+  <!-- Expandable Drawer -->
+  <div class="drawer" id="drawer">
+    
+    <a href="index.html"><span class="icon">🏠</span> Home</a>
+    <a href="shorts.html"><span class="icon">🎬</span> Shorts</a>
+    <a href="#"><span class="icon">📺</span> Subscriptions</a>
+    <a href="account.html"><span class="icon">👤</span> You</a>
+    <a href="#"><span class="icon">🕒</span> History</a>
+    <a href="#"><span class="icon">🎵</span> Playlists</a>
+    <a href="#"><span class="icon">📹</span> Your videos</a>
+    <a href="#"><span class="icon">⏱</span> Watch later</a>
+    <a href="#"><span class="icon">👍</span> Liked videos</a>
+    <hr />
+    <a href="#"><span class="icon">📺</span> Subscriptions</a>
+    <a href="#">Moonbug Kids - Best Cars and Truck Videos for Kids</a>
+    <a href="#">LooLoo Kids - Nursery Rhymes and Children's Songs</a>
+  </div>
+
+  <!-- Overlay (separate from drawer) -->
+  <div class="overlay" id="overlay"></div>
+
+  <!-- Categories -->
+  <div class="categories-wrapper">
+     <button class="scroll-btn left" id="scrollLeft">◀</button>
+  <div class="categories" id="categories">
+      <div class="chip active">All</div>
+      <div class="chip">Music</div>
+      <div class="chip">African Music</div>
+      <div class="chip">Playlists</div>
+      <div class="chip">Mixes</div>
+      <div class="chip">Riddim</div>
+      <div class="chip">Live</div>
+      <div class="chip">Podcasts</div>
+      <div class="chip">Dr. Dre</div>
+      <div class="chip">Web pages</div>
+      <div class="chip">New-Age Music</div>
+      <div class="chip">Contemporary Worship Music</div>
+      <div class="chip">Comedy</div>
+      <div class="chip">Animated films</div>
+      <div class="chip">Recently uploaded</div>
+      <div class="chip">Watched</div>
+      <div class="chip">New to you</div>
+    </div>
+    <button class="scroll-btn right" id="scrollRight">▶</button>  <!-- Right arrow button -->
+</div>>
+
+  <!-- Content (video grid etc.) -->
+  <div class="content">
+    <div class="video-grid">
+      <!-- Your video cards go here -->
+    </div>
+  </div>
+
+  <div class="content">
+    <div class="video-grid">
+      <!-- LIVE Tim Janis -->
+      <div class="video-card">
+        <div class="video-thumbnail">
+          <img src="https://img.youtube.com/vi/dXIyMS61B68/hqdefault.jpg" alt="Tim Janis Live" />
+          <span class="live-badge">LIVE</span>
+        </div>
+        <div class="video-info">
+          <div class="channel-icon">
+            <img src="https://yt3.ggpht.com/F4QbLbxen8plplGPfWcsq4a3NCsEOUX4iBhpBlPJYP4yzzqD5FzRvUelVCJmfv_P3mBJXdEE=s88-c-k-c0x00ffffff-no-rj" />
+          </div>
+          <div class="video-text">
+            <div class="video-title">
+              Beautiful Relaxing Peaceful Music, Calm Music 24/7, "Tropical Shores" By Tim Janis
+            </div>
+            <div class="video-meta">Tim Janis • 3.3K watching</div>
+          </div>
+        </div>
+      </div>
+      <!-- DJ STAN Party Vibes -->
+      <div class="video-card">
+        <div class="video-thumbnail">
+          <img src="https://img.youtube.com/vi/V7y9j8v81Sw/hqdefault.jpg" alt="DJ STAN Night Party Vibes" />
+          <span class="duration">1:00:28</span>
+        </div>
+        <div class="video-info">
+          <div class="channel-icon">
+            <img src="https://yt3.ggpht.com/suuO2tdVaTjuPCKnLciWqT2m9IJLRUTUTtFtqrGwnYbnL85CjxS2_trEHZB-TZzqhDmOSYAFNg=s68-c-k-c0x00ffffff-no-rj" />
+          </div>
+          <div class="video-text">
+            <div class="video-title">
+              🔥DJ STAN NIGHT PARTY VIBES FT 🚀 TAYA | BIEN | OKELLO MAX | MIX 2025 ^Ladies Edition
+            </div>
+            <div class="video-meta">DJ STAN 🇰🇪 • 84K views • 6 days ago</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- BEST OF MUGITHI -->
+      <div class="video-card">
+        <div class="video-thumbnail">
+          <img src="https://img.youtube.com/vi/hJQUh6yZkFY/hqdefault.jpg" alt="Mugithi">
+          <span class="duration">1:20:06</span>
+        </div>
+        <div class="video-info">
+          <div class="channel-icon"><img src="https://yt3.ggpht.com/sXqkNJIBrDSkUQGNGnWCQ6SpSXlktR0N5_srTZ5L7AfTslKIo6vyD-Il70TMKYYuyTb5wxy-fA=s68-c-k-c0x00ffffff-no-rj"></div>
+          <div class="video-text">
+            <div class="video-title">BEST OF MUGITHI MASHUPS MIXTAPE WITH SELECTOR DEDEE</div>
+            <div class="video-meta">DEDEE • 99K views • 1 month ago</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- LIVE ODM -->
+      <div class="video-card">
+        <div class="video-thumbnail">
+          <img src="https://img.youtube.com/vi/orHJaye0VWk/hqdefault.jpg" alt="ODM Live">
+          <span class="live-badge">LIVE</span>
+        </div>
+        <div class="video-info">
+          <div class="channel-icon"><img src="https://yt3.ggpht.com/Ch-3PsStY-tVD6t62AIOUD87NJB-gcRfHGC44P45OyfWHkiO25ILWMzf5nhcih4V5RiPAVFK3g=s68-c-k-c0x00ffffff-no-rj"></div>
+          <div class="video-text">
+            <div class="video-title">LIVE; ODM UNVEILING CANDIDATES FOR UPCOMING BY-ELECTIONS!</div>
+            <div class="video-meta">Kenya News Alerts TV • 278 watching</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- DJ Joe Mfalme -->
+      <div class="video-card">
+        <div class="video-thumbnail">
+          <img src="https://img.youtube.com/vi/Ve8DC9W_QnQ/hqdefault.jpg" alt="DJ Joe">
+          <span class="duration">1:04:25</span>
+        </div>
+        <div class="video-info">
+          <div class="channel-icon"><img src="https://yt3.ggpht.com/r8KZsJ3NmOjpteAStOi8tw9hhC_yNqI41D3OTB2Gx8Tpd_NwhOW4rm6TcP57moEpfUb4s2bvudM=s68-c-k-c0x00ffffff-no-rj"></div>
+          <div class="video-text">
+            <div class="video-title">Dj Joe Mfalme Mixx 106 - Amapiano, Afro.</div>
+            <div class="video-meta">DJ Joe Mfalme • 63K views • 9 days ago</div>
+          </div>
+        </div>
+      </div>
+
+    
+      <!-- Example for African Music Greatest Hits -->
+      <div class="video-card">
+        <div class="video-thumbnail">
+          <img src="https://img.youtube.com/vi/86gSdNES4qY/hqdefault.jpg" alt="Afrobeat 2025">
+          <span class="live-badge">LIVE</span>
+        </div>
+        <div class="video-info">
+          <div class="channel-icon"><img src="https://yt3.ggpht.com/yNVjpjswGFhbwXmZPo86i0WbN54LiBvXQmaJ96FHmjoWJ0bxoIQZqANAEQ1Gt3z2z8qYHn_kKUU=s68-c-k-c0x00ffffff-no-rj"></div>
+          <div class="video-text">
+            <div class="video-title">AFRICAN MUSIC GREATEST HITS OF 2025 (24,23)✨ AMAPIANO, AFROBEATS MIX</div>
+            <div class="video-meta">AFROBEAT 2025 • 10 watching</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Visiting Patello -->
+      <div class="video-card">
+        <div class="video-thumbnail">
+          <img src="https://img.youtube.com/vi/bGTU7s_av9A/hqdefault.jpg" alt="Patello">
+          <span class="duration">37:02</span>
+        </div>
+        <div class="video-info">
+          <div class="channel-icon"><img src="https://yt3.ggpht.com/7WLSRVvnRAKXlqc5HZd7-JxUro7bHZl_J7v8q0lyCXaok4Y_tM0Wof2lUSJHqvFPOVCP8cLbvA=s68-c-k-c0x00ffffff-no-rj"></div>
+          <div class="video-text">
+            <div class="video-title">Visiting PATELLO Na DEE Multi Million Home In Utawala!!</div>
+            <div class="video-meta">TOO PERSONAL WITH 2MBILI • 166K views • 1 day ago</div>
+          </div>
+        </div>
+      </div>
+
+
+      <!-- 48’s Weekend Free Style -->
+<div class="video-card">
+  <div class="video-thumbnail">
+    <img src="https://img.youtube.com/vi/ta4Fqr3600Y/hqdefault.jpg" alt="48's Weekend Free Style">
+    <span class="duration">1:00:27</span>
+  </div>
+  <div class="video-info">
+    <div class="channel-icon"><img src="https://yt3.ggpht.com/bdG2i-aiIUfoB6GyeOVDmNlEU7LiOrQaLgRRXK01t5Un96hHSZ4F-mYQCEImx8m4s8eTahwfYcM=s68-c-k-c0x00ffffff-no-rj"></div>
+    <div class="video-text">
+      <div class="video-title">48's Weekend Free Style Set 11 [Ibiza live mix] #riddim #afrobeats</div>
+      <div class="video-meta">48’s Audio Lab • 19K views • 9 days ago</div>
+    </div>
+  </div>
+</div>
+
+<!-- AMAPIANO ON THE PARK -->
+<div class="video-card">
+  <div class="video-thumbnail">
+    <img src="https://img.youtube.com/vi/FHB3M5AZ71Y/hqdefault.jpg" alt="Amapiano on the Park">
+    <span class="duration">1:14:18</span>
+  </div>
+  <div class="video-info">
+    <div class="channel-icon"><img src="https://yt3.ggpht.com/yCC_i_BoPOJgzn60YzyMLmYxpZUp7qXr7nOqxOWXeNIk85A834j8gIBqGiTnY01y8MB7UhX6vko=s88-c-k-c0x00ffffff-no-rj"></div>
+    <div class="video-text">
+      <div class="video-title">AMAPIANO ON THE PARK by Tony Slay in Stuttgart || DJ Maphorisa, Scotts Maphuma, Diamond Platnumz</div>
+      <div class="video-meta">TONY SLAY 254 • 33K views • 2 weeks ago</div>
+    </div>
+  </div>
+</div>
+
+<!-- Mugithi Rhumba Mix -->
+<div class="video-card">
+  <div class="video-thumbnail">
+    <img src="https://img.youtube.com/vi/zcA7Ru45PwQ/hqdefault.jpg" alt="Mugithi Rhumba Mix">
+    <span class="duration">53:54</span>
+  </div>
+  <div class="video-info">
+    <div class="channel-icon"><img src="https://yt3.ggpht.com/m-j2WBTljX8fQMR2Yc5bMTz1BWnbFrnF3u7YW5DKR0BHG3u30KLZjmAyX1g7TDQWO_C0MWrupQ=s68-c-k-c0x00ffffff-no-rj"></div>
+    <div class="video-text">
+      <div class="video-title">MUGITHI RHUMBA MIX-LIVE OFFICIAL VIDEO (cover) by KAMSON</div>
+      <div class="video-meta">Kamson Official • 358K views • 5 months ago</div>
+    </div>
+  </div>
+</div>
+
+<!-- Wait A Minute -->
+<div class="video-card">
+  <div class="video-thumbnail">
+    <img src="https://img.youtube.com/vi/4vjVSa4SCuU/hqdefault.jpg" alt="Wait A Minute">
+    <span class="duration">19:24</span>
+  </div>
+  <div class="video-info">
+    <div class="channel-icon"><img src="https://yt3.ggpht.com/Cy6L_sF9vAlB0IRcfmEkjL-QMZZqY7ZTgvBvnVbX0uVYqGs5f3pTh7yR36ln9VOiECAjTfZIIHE=s68-c-k-c0x00ffffff-no-rj"></div>
+    <div class="video-text">
+      <div class="video-title">Wait A minute!! (A Minute with the Pastor) Ep 2</div>
+      <div class="video-meta">Vinnie Baite • 69K views • 8 days ago</div>
+    </div>
+  </div>
+</div>
+
+<!-- Reggae Gospel Hits -->
+<div class="video-card">
+  <div class="video-thumbnail">
+    <img src="https://img.youtube.com/vi/4gZInHq1XXI/hqdefault.jpg" alt="Reggae Gospel Hits">
+    <span class="duration">1:40:53</span>
+  </div>
+  <div class="video-info">
+    <div class="channel-icon"><img src="https://yt3.ggpht.com/A3N_edtJ9FThk1P8kGo1A7hjDHv-8_6b0oZDJiIae7G_c_pX4HBglwFwtWcBPmFH_MPq5n5M=s68-c-k-c0x00ffffff-no-rj"></div>
+    <div class="video-text">
+      <div class="video-title">Reggae Gospel Hits 2025 | Uplifting Praise & Worship Music</div>
+      <div class="video-meta">Radio Reggae Gospel • 1.1K views • 3 days ago</div>
+    </div>
+  </div>
+</div>
+
+      <!-- Old School 90s Mix -->
+<div class="video-card">
+  <div class="video-thumbnail">
+    <img src="https://img.youtube.com/vi/ywmfi5Ax3z8/hqdefault.jpg" alt="Old School 90s Mix">
+    <span class="duration">2:02:11</span>
+  </div>
+  <div class="video-info">
+    <div class="channel-icon"><img src="https://yt3.ggpht.com/kMlbwoISYqJgLaainAMyZbu2alhNTDIeg6itsiEBicn-bL8KC7ijEttfbOtc8U5PymHoZb5Z1A=s68-c-k-c0x00ffffff-no-rj"></div>
+    <div class="video-text">
+      <div class="video-title">Old School 90s💥 Eminem & Snoop Dogg, Tyga, 50 Cent, Dr Dre, Ice Cube, Juicy, Drake, Cover Style 🎤 #57</div>
+      <div class="video-meta">Flow Nation • 22K views • 10 days ago</div>
+    </div>
+  </div>
+</div>
+
+<!-- WIZZOH33 ft SESKA -->
+<div class="video-card">
+  <div class="video-thumbnail">
+    <img src="https://img.youtube.com/vi/j1-cCN6poU8/hqdefault.jpg" alt="Wizzoh33 ft Seska">
+    <span class="duration">2:38</span>
+  </div>
+  <div class="video-info">
+    <div class="channel-icon"><img src="https://yt3.ggpht.com/vybXiNywLg5Jj0eyNMzixc9LIu8OmJOYydLepf7AouIAyp7ZU_3BViuBZlYHP5HvPRMTyxNN=s68-c-k-c0x00ffffff-no-rj"></div>
+    <div class="video-text">
+      <div class="video-title">WIZZOH33 ft SESKA {Ethic Entertainment} - SI UPERFORM - [Official Visualizer]</div>
+      <div class="video-meta">Wizzoh Thirty3 Tv • 303 views • 19 hours ago</div>
+    </div>
+  </div>
+</div>
+
+<!-- BEST CLUB BANGERS MIX 2025 -->
+<div class="video-card">
+  <div class="video-thumbnail">
+    <img src="https://img.youtube.com/vi/w8dL_wGsKzI/hqdefault.jpg" alt="Best Club Bangers Mix 2025">
+    <span class="duration">59:23</span>
+  </div>
+  <div class="video-info">
+    <div class="channel-icon"><img src="https://yt3.ggpht.com/suuO2tdVaTjuPCKnLciWqT2m9IJLRUTUTtFtqrGwnYbnL85CjxS2_trEHZB-TZzqhDmOSYAFNg=s68-c-k-c0x00ffffff-no-rj"></div>
+    <div class="video-text">
+      <div class="video-title">🔥BEST CLUB BANGERS MIX 2025🎶 FT MPISHI | BIEN | RAM RAM | NAIROBI - STAN EDITION</div>
+      <div class="video-meta">DJ STAN 🇰🇪 • 398K views • 3 months ago</div>
+    </div>
+  </div>
+</div>
+
+<!-- Zoza Podcast -->
+<div class="video-card">
+  <div class="video-thumbnail">
+    <img src="https://img.youtube.com/vi/6qblR2spLWs/hqdefault.jpg" alt="Zoza Podcast">
+    <span class="duration">1:40:41</span>
+  </div>
+  <div class="video-info">
+    <div class="channel-icon"><img src="https://yt3.ggpht.com/kUddAjSuUJB6CLMJrTJYt_NdSwdQJT8fhZiLlnqtnYy9lQG8dezWP9Dc0loU8CrEPjkR6g7Q2w=s68-c-k-c0x00ffffff-no-rj"></div>
+    <div class="video-text">
+      <div class="video-title">Thithad3 : Gen Z Minister of Foreign Affairs | Zoza Podcast</div>
+      <div class="video-meta">ZOZA PODCAST • 66K views • 2 weeks ago</div>
+    </div>
+  </div>
+</div>
+
+<!-- Hidden Spiritual Laws -->
+<div class="video-card">
+  <div class="video-thumbnail">
+    <img src="https://img.youtube.com/vi/IsFgXbn9mjQ/hqdefault.jpg" alt="Hidden Spiritual Laws">
+    <span class="duration">1:02:25</span>
+  </div>
+  <div class="video-info">
+    <div class="channel-icon"><img src="https://yt3.ggpht.com/AAXeARPigN6FyVhC3ApCruX1OE9y9RkPBVZtRTLVRdJYYcXVLe6NMldIxR2RMhZqy7LAdnkQIVk=s68-c-k-c0x00ffffff-no-rj"></div>
+    <div class="video-text">
+      <div class="video-title">7 Hidden Spiritual Laws That Govern Your Money - Florence Scovel Shinn</div>
+      <div class="video-meta">Shinn Wisdom • 213K views • 2 months ago</div>
+    </div>
+  </div>
+</div>
+
+<!-- Feel Instant JOY with Reggae Gospel -->
+<div class="video-card">
+  <div class="video-thumbnail">
+    <img src="https://img.youtube.com/vi/Pu4sz_Rfzk8/hqdefault.jpg" alt="Reggae Gospel Joy">
+    <span class="duration">1:39:15</span>
+  </div>
+  <div class="video-info">
+    <div class="channel-icon"><img src="https://yt3.ggpht.com/LI_rGnAyhbtgmFUd-QvjVGmjOZX0na7yiSrEDGEO696VecT5O067yzPncpvzjyPUr_PWDHmbbg=s68-c-k-c0x00ffffff-no-rj"></div>
+    <div class="video-text">
+      <div class="video-title">Feel Instant JOY with Reggae Gospel 2025 Music!</div>
+      <div class="video-meta">Soulshine Reggae Gospel • 13K views • 9 days ago</div>
+    </div>
+  </div>
+</div>
+      <!-- Add other video cards in similar fashion ... -->
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
