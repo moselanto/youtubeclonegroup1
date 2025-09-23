@@ -259,11 +259,11 @@ img {
 }
 
 .rectangle-104-32 {
-  flex-grow: 1;
+  flex-grow: 0;
   flex-shrink: 1;
   flex-basis: auto;
   border-radius: 10px;
-  width: 100px;
+  width: 100%;
   height: auto;
 }
 
@@ -301,11 +301,11 @@ img {
 }
 
 .rectangle-103-36 {
-  flex-grow: 1;
+  flex-grow: 0;
   flex-shrink: 1;
   flex-basis: auto;
   border-radius: 10px;
-  width: 100px;
+  width: 100%;
   height: auto;
 }
 
@@ -355,11 +355,11 @@ img {
 }
 
 .rectangle-102-41 {
-  flex-grow: 1;
+  flex-grow: 0;
   flex-shrink: 1;
   flex-basis: auto;
   border-radius: 10px;
-  width: 100px;
+  width: 100%;
   height: auto;
 }
 
@@ -397,11 +397,11 @@ img {
 }
 
 .rectangle-99-45 {
-  flex-grow: 1;
+  flex-grow: 0;
   flex-shrink: 1;
   flex-basis: auto;
   border-radius: 10px;
-  width: 100px;
+  width: 100%;
   height: auto;
 }
 
