@@ -47,10 +47,10 @@
             <button class="play-btn">
               <img src="vassets/play-button-svgrepo-com.svg" alt="Play" />
             </button>
-            <button class="arrow-btn prev-btn">
+            <button class="arrow-btn prev-btn" onclick="location.href='index.html'">
               <img src="vassets/vector-12.svg" alt="Previous" />
             </button>
-            <button class="arrow-btn next-btn">
+            <button class="arrow-btn next-btn"  onclick="location.href='prev.html'">
               <img src="vassets/vector-21.svg" alt="Next" />
             </button>
           </div>
@@ -165,10 +165,6 @@
       </ul>
     </aside>
   </div>
-  <button class="arrow-btn next-btn" onclick="window.location.href='nextvideo.html'">
-  <img src="vassets/vector-21.svg" alt="Next" />
-</button>
-
   <script>
   const menuBtn = document.getElementById('menuBtn');
   const sidebar = document.getElementById('sidebar');
@@ -180,6 +176,7 @@
       sidebar.classList.remove('sidebar-open');
     }
   });
-</script>
+  
+ </script>
 </body>
 </html>
