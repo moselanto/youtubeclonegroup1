@@ -336,13 +336,15 @@ body {
 }
 
 
-/* ────────────── Shorts Section ────────────── */
+/* Shorts container should fill the whole screen below the top bar */
 .shorts-container {
-  height: 640px; /* fixed height */
-  overflow-y: scroll;
+  height: calc(100vh - 56px);   /* 56px = topbar height */
+  overflow-y: auto;
   scroll-snap-type: y mandatory;
-  background: #fff; /* optional dark background */
+  background: #fff;
+  padding-top: 56px;            /* keeps first card clear of topbar */
 }
+
 
 
 .shorts-slider {
@@ -602,11 +604,16 @@ body {
 }
 
 @media (max-width: 600px) {
-  .shorts-card {
-    width: 100%;
-    max-width: 360px;
-    height: 500px;
-  }
+.shorts-card {
+  width: 100%;
+  max-width: 420px;
+  height: calc(100vh - 56px);
+  margin-bottom: 0;
+}
+.video {
+  height: 100%;
+}
+  
   .actions,
   .nav-arrows {
     right: -40px;
@@ -692,48 +699,39 @@ body {
   bottom: 0;
   left: 0;
   right: 0;
-  height: 56px;
+  height: 60px;
   background: #fff;
   border-top: 1px solid #ddd;
-  display: none; /* hidden on desktop */
-  justify-content: space-around;
+  display: flex;
+  justify-content: space-evenly;
   align-items: center;
-  z-index: 1001; /* above content */
+  z-index: 1001;
+  padding: 0 4px;
+}
+
+/* give page content room so nav doesn't cover it */
+body {
+  padding-bottom: 60px;  /* match nav height */
 }
 
 .mobile-bottom-nav .nav-item {
   flex: 1;
   text-align: center;
-  text-decoration: none;
   color: #333;
-  font-size: 12px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+  font-size: 13px;
+  text-decoration: none;
 }
 
 .mobile-bottom-nav .icon {
-  font-size: 22px;
-  line-height: 1;
+  font-size: 24px;
 }
 
 .mobile-bottom-nav .center-btn .icon {
-  font-size: 28px;
-  background: red;          /* YouTube-style red circle */
+  background: red;
   color: #fff;
   border-radius: 50%;
-  padding: 8px 12px;
-  margin-top: -16px;        /* make it pop up slightly */
-}
-
-@media (max-width: 768px) {
-  .mobile-bottom-nav {
-    display: flex;
-  }
-  /* Give bottom space to page content so nav doesn’t cover it */
-  body {
-    padding-bottom: 56px;
-  }
+  padding: 8px;
+  font-size: 28px;
+  margin-top: -16px;
 }
 
