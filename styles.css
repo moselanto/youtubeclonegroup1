@@ -641,23 +641,19 @@ body {
 /* Make the Shorts layout responsive */
 .shorts-grid {
   display: grid;
-  grid-template-columns: repeat(5, 1fr); /* 5 equal columns on large screens */
+  grid-template-columns: repeat(5, 1fr); /* 5 equal columns desktop */
   gap: 16px;
-  padding: 0 16px;
 }
 
-/* Mobile: 2 columns */
-@media (max-width: 768px) {
-  .shorts-grid {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 12px;
-  }
-}
-
-/* Optional tablet breakpoint: 3 columns */
 @media (max-width: 1024px) {
   .shorts-grid {
     grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .shorts-grid {
+    grid-template-columns: repeat(2, 1fr);
   }
 }
 
