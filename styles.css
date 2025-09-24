@@ -638,16 +638,29 @@ body {
   margin-bottom: 12px;
 }
 
-/* Make the cards sit side-by-side */
+/* Make the Shorts layout responsive */
 .shorts-grid {
-  display: flex;              /* lay them out in a row */
-  flex-wrap: nowrap;          /* keep in one line, allow horizontal scroll */
-  gap: 16px;                  /* space between cards */
-  overflow-x: auto;           /* enable horizontal scrolling on small screens */
-  padding-bottom: 8px;        /* a little breathing room */
-  scrollbar-width: none;      /* hide scrollbar (Firefox) */
+  display: grid;
+  grid-template-columns: repeat(5, 1fr); /* 5 equal columns on large screens */
+  gap: 16px;
+  padding: 0 16px;
 }
-.shorts-grid::-webkit-scrollbar { display: none; } /* hide scrollbar (WebKit) */
+
+/* Mobile: 2 columns */
+@media (max-width: 768px) {
+  .shorts-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+  }
+}
+
+/* Optional tablet breakpoint: 3 columns */
+@media (max-width: 1024px) {
+  .shorts-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
 
 .short-card {
   flex: 0 0 200px;            /* fixed width so they don’t stretch */
@@ -660,7 +673,6 @@ body {
 .short-card iframe {
   width: 100%;
   aspect-ratio: 9/16;
-  height: 350px;              /* adjust as you like */
   border: none;
 }
 
