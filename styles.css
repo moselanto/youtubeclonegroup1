@@ -651,21 +651,21 @@ body {
 /* Make the Shorts layout responsive */
 .shorts-grid {
   display: grid;
-  grid-template-columns: repeat(5, 1fr); /* 5 equal columns desktop */
+  grid-template-columns: repeat(5, 1fr);  /* five equal columns */
   gap: 16px;
 }
 
 @media (max-width: 1024px) {
   .shorts-grid {
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(3, 1fr); /* tablet */
   }
 }
 
 @media (max-width: 768px) {
-  /* 2 columns for mobile layout */
   .shorts-grid {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(2, 1fr); /* mobile */
   }
+}
 
   /* hide every card after the 4th */
   .shorts-grid .short-card:nth-child(n + 5) {
@@ -701,10 +701,11 @@ body {
   color: #606060;
 }
 
-/* Force Shorts section to use the entire page width */
+/* Make the Shorts section span the full browser width */
 .shorts-section {
-  width: 90vw;         /* full viewport width */
-  padding: 20px 5vw;    /* optional side padding */
+  width: 100vw;                          /* full viewport width */
+  margin-left: calc(-50vw + 50%);         /* pull it out of centered wrapper */
+  padding: 20px 5vw;                      /* optional side padding */
   box-sizing: border-box;
 }
 
