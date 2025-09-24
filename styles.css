@@ -662,10 +662,15 @@ body {
 }
 
 @media (max-width: 768px) {
+  /* 2 columns for mobile layout */
   .shorts-grid {
     grid-template-columns: repeat(2, 1fr);
   }
-}
+
+  /* hide every card after the 4th */
+  .shorts-grid .short-card:nth-child(n + 5) {
+    display: none;
+  }
 
 
 .short-card {
@@ -703,3 +708,18 @@ body {
   padding: 20px 5vw;    /* optional side padding */
   box-sizing: border-box;
 }
+
+  /* style the button */
+  .show-more-btn {
+    display: block;
+    margin: 16px auto 0;
+    padding: 10px 20px;
+    background: #e41e26;
+    color: #fff;
+    border: none;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    cursor: pointer;
+  }
+}
+
