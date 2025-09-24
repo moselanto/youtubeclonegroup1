@@ -9,7 +9,7 @@
 body {
   display: flex;
   flex-direction: column;
-  min-height: 100vh;   /* ✅ use min-height instead of fixed height */
+  height: 100vh;
   background: #fff;
 }
 
@@ -338,15 +338,11 @@ body {
 
 /* Shorts container should fill the whole screen below the top bar */
 .shorts-container {
-  position: relative;
-  width: 100%;
-  height: calc(100vh - 56px - 60px); /* fill screen between header & footer */
-  margin-top: 56px;                 /* push below fixed topbar */
+  height: calc(100vh - 56px);   /* 56px = topbar height */
   overflow-y: auto;
   scroll-snap-type: y mandatory;
-  -webkit-overflow-scrolling: touch;
-  background: #000;
-  padding: 0;
+  background: #fff;
+  padding-top: 56px;            /* keeps first card clear of topbar */
 }
 
 
@@ -358,21 +354,24 @@ body {
   /* Remove manual transforms/transition for slider */
 }
 
-/* Each short takes up exactly one viewport */
 .shorts-card {
-  width: 100%;
-  height: calc(100vh - 56px - 60px);
-  scroll-snap-align: start;
-  display: flex;
-  justify-content: center;
-  align-items: center;
   background: #000;
+  width: 360px;
+  height: 640px;
+  border-radius: 12px;
+  overflow: hidden;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  margin-bottom: 20px; /* space between cards */
+  scroll-snap-align: start; /* snap behaviour */
 }
 
-/* The <video> itself fills the screen and stays centered */
 .video {
   width: 100%;
-  height: 100%;
+  height: 85%;
   object-fit: cover;
 }
 
@@ -735,4 +734,3 @@ body {
   font-size: 28px;
   margin-top: -16px;
 }
-
