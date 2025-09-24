@@ -626,51 +626,53 @@ body {
 }
 
 
-/* ===== Shorts Carousel ===== */
+/* ===== Shorts Section ===== */
 .shorts-section {
-  margin: 24px 0;
+  margin: 32px 0;
 }
 
-.shorts-title {
-  font-size: 1.2rem;
-  font-weight: 600;
+.shorts-heading {
+  font-size: 1.4rem;
+  font-weight: 700;
+  margin-bottom: 16px;
   padding: 0 16px;
-  margin-bottom: 12px;
 }
 
-.shorts-container {
-  display: flex;
-  overflow-x: auto;
-  gap: 12px;
+.shorts-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 20px;
   padding: 0 16px;
-  scroll-snap-type: x mandatory;
 }
 
-.shorts-container::-webkit-scrollbar {
-  display: none; /* hide scrollbar for cleaner look */
-}
-
-.shorts-card {
-  flex: 0 0 150px;          /* width of each short */
+.short-card {
+  background: #f9f9f9;
   border-radius: 12px;
   overflow: hidden;
-  scroll-snap-align: start;
-  background: #000;
-  text-align: center;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
 }
 
-.shorts-card img,
-.shorts-card video {
+.short-card iframe {
   width: 100%;
   aspect-ratio: 9/16;
-  object-fit: cover;
+  border: none;
 }
 
-.shorts-caption {
-  font-size: 0.9rem;
-  padding: 6px;
-  color: #333;
+.short-info {
+  padding: 10px;
 }
+
+.short-title {
+  font-size: 0.95rem;
+  font-weight: 600;
+  margin-bottom: 6px;
+}
+
+.short-views {
+  font-size: 0.85rem;
+  color: #555;
+}
+
 .shorts-card iframe {
   width: 100%;
   aspect-ratio: 9/16;   /* keeps vertical video proportions */
