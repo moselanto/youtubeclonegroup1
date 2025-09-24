@@ -690,7 +690,6 @@ body {
 /* Force Shorts section to use the entire page width */
 .shorts-section {
   width: 100vw;         /* full viewport width */
-  margin-left: calc(-50vw + 50%); /* pull it out of centered parent if needed */
   padding: 20px 5vw;    /* optional side padding */
   box-sizing: border-box;
 }
