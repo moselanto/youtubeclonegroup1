@@ -639,7 +639,7 @@ body {
 /* Shorts section */
 .shorts-section {
   /* optional: add top/bottom padding to match rest of site */
-  padding: 20px;
+  padding: 20px 0;
 }
 
 .shorts-heading {
@@ -650,8 +650,9 @@ body {
 
 .shorts-grid {
   display: grid;
-  grid-template-columns: repeat(5, 1fr);
+  grid-template-columns: repeat(5, 1fr); /* full 5 columns on desktop */
   gap: 16px;
+  width: 100%;                           /* stretch to container width */
 }
 
 @media (max-width: 1024px) {
@@ -661,8 +662,14 @@ body {
 }
 
 @media (max-width: 768px) {
+  /* two columns on mobile */
   .shorts-grid {
     grid-template-columns: repeat(2, 1fr);
+  }
+
+  /* hide anything after the 4th card */
+  .shorts-grid .short-card:nth-child(n + 5) {
+    display: none;
   }
 }
 
