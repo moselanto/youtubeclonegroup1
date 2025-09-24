@@ -704,7 +704,7 @@ body {
 /* Make the Shorts section span the full browser width */
 .shorts-section {
   width: 100vw;                          /* full viewport width */
-  margin-left: calc(-50vw + 50%);         /* pull it out of centered wrapper */
+  margin-left: calc(-25vw + 50%);         /* pull it out of centered wrapper */
   padding: 20px 5vw;                      /* optional side padding */
   box-sizing: border-box;
 }
