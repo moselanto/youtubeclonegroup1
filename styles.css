@@ -638,10 +638,9 @@ body {
 
 /* ===== Reset any conflicting styles earlier ===== */
 .shorts-section {
-  width: 100%;
+  width: 90vw;
   max-width: none;
   margin: 32px 0;
-  padding: 0 16px;
   box-sizing: border-box;
 }
 
