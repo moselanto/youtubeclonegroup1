@@ -572,3 +572,56 @@ body {
 .dropdown-menu a:hover {
   background: #f2f2f2;
 }
+
+
+/* ===== Mobile Bottom Nav ===== */
+.mobile-bottom-nav {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 56px;
+  background: #fff;
+  border-top: 1px solid #ddd;
+  display: none; /* hidden on desktop */
+  justify-content: space-around;
+  align-items: center;
+  z-index: 1001; /* above content */
+}
+
+.mobile-bottom-nav .nav-item {
+  flex: 1;
+  text-align: center;
+  text-decoration: none;
+  color: #333;
+  font-size: 12px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.mobile-bottom-nav .icon {
+  font-size: 22px;
+  line-height: 1;
+}
+
+.mobile-bottom-nav .center-btn .icon {
+  font-size: 28px;
+  background: red;          /* YouTube-style red circle */
+  color: #fff;
+  border-radius: 50%;
+  padding: 8px 12px;
+  margin-top: -16px;        /* make it pop up slightly */
+}
+
+@media (max-width: 768px) {
+  .mobile-bottom-nav {
+    display: flex;
+  }
+  /* Give bottom space to page content so nav doesn’t cover it */
+  body {
+    padding-bottom: 56px;
+  }
+}
+
