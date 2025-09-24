@@ -671,4 +671,10 @@ body {
   padding: 6px;
   color: #333;
 }
+.shorts-card iframe {
+  width: 100%;
+  aspect-ratio: 9/16;   /* keeps vertical video proportions */
+  border: none;
+}
+
 
