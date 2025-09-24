@@ -756,3 +756,84 @@ body {
     display: none;
   }
 }
+
+/* ===== Reset any conflicting styles earlier ===== */
+.shorts-section {
+  width: 100%;
+  max-width: none;
+  margin: 32px 0;
+  padding: 0 16px;
+  box-sizing: border-box;
+}
+
+.shorts-heading {
+  font-size: 1.3rem;
+  margin-bottom: 16px;
+}
+
+/* The grid: horizontal layout on desktop */
+.shorts-grid {
+  display: grid !important;
+  grid-template-columns: repeat(5, 1fr) !important;
+  gap: 16px;
+  width: 100%;
+}
+
+/* Tablet / medium screens: reduce columns */
+@media (max-width: 1024px) {
+  .shorts-grid {
+    grid-template-columns: repeat(3, 1fr) !important;
+  }
+}
+
+/* Mobile: 2 columns, hide 5th and further until “Show more” */
+@media (max-width: 768px) {
+  .shorts-grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+  .shorts-grid .short-card:nth-child(n + 5) {
+    display: none !important;
+  }
+}
+
+.short-card {
+  background: #fff;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+.short-card iframe {
+  width: 100%;
+  aspect-ratio: 9 / 16;
+  border: none;
+  display: block;
+}
+
+.short-info {
+  padding: 8px 12px;
+}
+
+.short-title {
+  font-size: 14px;
+  margin: 0 0 4px;
+}
+
+.short-views {
+  font-size: 12px;
+  color: #666;
+}
+
+/* Show More button styling */
+.show-more-btn {
+  display: block;
+  margin: 16px auto 0;
+  padding: 10px 20px;
+  background: #e41e26;
+  color: #fff;
+  border: none;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  cursor: pointer;
+}
+
