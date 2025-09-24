@@ -636,127 +636,6 @@ body {
 }
 
 
-/* ✅ Shorts Section */
-.shorts-section {
-  width: 100%;
-  max-width: 100%;
-  margin: 40px 0;
-  padding: 0 16px;            /* small horizontal breathing room */
-  box-sizing: border-box;
-}
-
-.shorts-heading {
-  font-size: 20px;
-  margin-bottom: 16px;
-}
-
-/* Full-width responsive grid */
-.shorts-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 16px;
-  width: 100%;
-}
-
-@media (max-width: 1024px) {
-  .shorts-grid {
-    grid-template-columns: repeat(3, 1fr);
-  }
-}
-
-@media (max-width: 768px) {
-  /* two columns on mobile */
-  .shorts-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-  /* hide anything after the 4th card */
-  .shorts-grid .short-card:nth-child(n + 5) {
-    display: none;
-  }
-}
-
-
-/* Individual short card */
-.short-card {
-  background: #fff;
-  border-radius: 12px;
-  overflow: hidden;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-}
-
-.short-card iframe {
-  width: 100%;
-  height: 360px;              /* adjust height to taste or use aspect-ratio */
-  display: block;
-}
-
-.short-info {
-  padding: 8px 12px;
-}
-
-.short-title {
-  font-size: 14px;
-  font-weight: 500;
-  margin: 0 0 4px;
-}
-
-
-.short-views {
-  font-size: 12px;
-  color: #666;
-}
-
-
-  /* style the button */
-  .show-more-btn {
-    display: block;
-    margin: 16px auto 0;
-    padding: 10px 20px;
-    background: #e41e26;
-    color: #fff;
-    border: none;
-    border-radius: 20px;
-    font-size: 0.9rem;
-    cursor: pointer;
-  }
-}
-
-/* --- Shorts Layout --- */
-.shorts-section {
-  width: 100%;
-  padding: 20px;
-  box-sizing: border-box;
-}
-
-.shorts-grid {
-  display: grid;
-  width: 100%;
-  gap: 16px;
-
-  /* 👇 Desktop: 5 equal columns */
-  grid-template-columns: repeat(5, 1fr);
-}
-
-/* Tablet: 3 columns */
-@media (max-width: 1024px) {
-  .shorts-grid {
-    grid-template-columns: repeat(3, 1fr);
-  }
-}
-
-/* Mobile: 2 columns */
-@media (max-width: 768px) {
-  .shorts-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-  /* Hide anything after the 4th card until “Show more” */
-  .shorts-grid .short-card:nth-child(n + 5) {
-    display: none;
-  }
-}
-
 /* ===== Reset any conflicting styles earlier ===== */
 .shorts-section {
   width: 100%;
@@ -836,4 +715,6 @@ body {
   font-size: 0.9rem;
   cursor: pointer;
 }
+
+
 
