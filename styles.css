@@ -47,7 +47,8 @@ body {
 }
 
 .logo-img {
-  height: 60px;   /* same as YouTube’s */
+  height: 60px;
+  /* same as YouTube’s */
   width: auto;
 }
 
@@ -129,26 +130,30 @@ body {
     margin: 0 10px;
     position: relative;
   }
+
   .search input {
     display: none;
     position: absolute;
-    top: 40px; /* Below topbar */
+    top: 40px;
+    /* Below topbar */
     left: 0;
     width: 200px;
     max-width: 80vw;
     background: #fff;
     border-radius: 40px;
-    box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
     transition: display 0.3s, opacity 0.3s;
     z-index: 2000;
     opacity: 0;
     pointer-events: none;
   }
+
   .search input.active {
     display: block;
     opacity: 1;
     pointer-events: auto;
   }
+
   .search button {
     width: 40px;
     min-width: 40px;
@@ -319,6 +324,7 @@ body {
   background: #000;
   color: #fff;
 }
+
 /* Scroll arrows - prevent overlap on chips */
 .scroll-btn {
   background: #fff;
@@ -336,7 +342,8 @@ body {
   top: 0;
   z-index: 1000;
   transition: background 0.2s;
-  box-shadow: 0 0 10px rgba(0,0,0,0.03); /* subtle shadow */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.03);
+  /* subtle shadow */
   pointer-events: auto;
 }
 
@@ -369,7 +376,8 @@ body {
   top: 0;
   z-index: 1000;
   transition: background 0.2s;
-  box-shadow: 0 0 10px rgba(0,0,0,0.03); /* subtle shadow */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.03);
+  /* subtle shadow */
   pointer-events: auto;
 }
 
@@ -395,7 +403,7 @@ body {
 }
 
 /* When categories bar is present */
-.categories-wrapper + .content {
+.categories-wrapper+.content {
   margin-top: 10px;
   /* 10px topbar + 48px categories */
   padding-top: 0;
@@ -495,12 +503,15 @@ body {
   .sidebar {
     display: none;
   }
+
   .categories-wrapper {
     left: 0;
   }
+
   .content {
     margin-left: 0;
   }
+
   .search {
     max-width: 100%;
     margin: 0 10px;
@@ -576,26 +587,31 @@ body {
 
 /* ===== Mobile Bottom Nav ===== */
 .mobile-bottom-nav {
-  position: fixed;        /* stays in place even when scrolling */
+  position: fixed;
+  /* stays in place even when scrolling */
   bottom: 0;
   left: 0;
   right: 0;
   height: 56px;
   background: #fff;
   border-top: 1px solid #ddd;
-  display: none;          /* hidden on desktop; revealed via media query */
+  display: none;
+  /* hidden on desktop; revealed via media query */
   justify-content: space-around;
   align-items: center;
-  z-index: 9999;          /* keep it above everything */
+  z-index: 9999;
+  /* keep it above everything */
 }
 
 @media (max-width: 768px) {
   .mobile-bottom-nav {
     display: flex;
   }
+
   /* prevent page content from hiding behind the nav */
   body {
-    padding-bottom: 56px;  /* equal to nav height */
+    padding-bottom: 56px;
+    /* equal to nav height */
   }
 }
 
@@ -618,17 +634,20 @@ body {
 
 .mobile-bottom-nav .center-btn .icon {
   font-size: 28px;
-  background: red;          /* YouTube-style red circle */
+  background: red;
+  /* YouTube-style red circle */
   color: #fff;
   border-radius: 50%;
   padding: 8px 12px;
-  margin-top: -16px;        /* make it pop up slightly */
+  margin-top: -16px;
+  /* make it pop up slightly */
 }
 
 @media (max-width: 768px) {
   .mobile-bottom-nav {
     display: flex;
   }
+
   /* Give bottom space to page content so nav doesn’t cover it */
   body {
     padding-bottom: 56px;
@@ -651,33 +670,37 @@ body {
 /* Make the Shorts layout responsive */
 .shorts-grid {
   display: grid;
-  grid-template-columns: repeat(5, 1fr);  /* five equal columns */
+  grid-template-columns: repeat(5, 1fr);
+  /* five equal columns */
   gap: 16px;
 }
 
 @media (max-width: 1024px) {
   .shorts-grid {
-    grid-template-columns: repeat(3, 1fr); /* tablet */
+    grid-template-columns: repeat(3, 1fr);
+    /* tablet */
   }
 }
 
 @media (max-width: 768px) {
   .shorts-grid {
-    grid-template-columns: repeat(2, 1fr); /* mobile */
+    grid-template-columns: repeat(2, 1fr);
+    /* mobile */
   }
 }
 
-  /* hide every card after the 4th */
-  .shorts-grid .short-card:nth-child(n + 5) {
-    display: none;
-  }
+/* hide every card after the 4th */
+.shorts-grid .short-card:nth-child(n + 5) {
+  display: none;
+}
 
 .short-card {
-  flex: 0 0 200px;            /* fixed width so they don’t stretch */
+  flex: 0 0 200px;
+  /* fixed width so they don’t stretch */
   background: #fff;
   border-radius: 8px;
   overflow: hidden;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
 }
 
 .short-card iframe {
@@ -703,23 +726,52 @@ body {
 
 /* Make the Shorts section span the full browser width */
 .shorts-section {
-  width: 100vw;                          /* full viewport width */
-  margin-left: calc(-25vw + 50%);         /* pull it out of centered wrapper */
-  padding: 20px 5vw;                      /* optional side padding */
+  width: 100vw;
+  /* full viewport width */
+  margin-left: calc(-25vw + 50%);
+  /* pull it out of centered wrapper */
+  padding: 20px 5vw;
+  /* optional side padding */
   box-sizing: border-box;
 }
 
-  /* style the button */
-  .show-more-btn {
-    display: block;
-    margin: 16px auto 0;
-    padding: 10px 20px;
-    background: #e41e26;
-    color: #fff;
-    border: none;
-    border-radius: 20px;
-    font-size: 0.9rem;
-    cursor: pointer;
-  }
+/* style the button */
+.show-more-btn {
+  display: block;
+  margin: 16px auto 0;
+  padding: 10px 20px;
+  background: #e41e26;
+  color: #fff;
+  border: none;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  cursor: pointer;
 }
 
+.search-preview {
+  position: absolute;
+  background: #fff;
+  border: 1px solid #ddd;
+  width: 350px;
+  max-height: 250px;
+  overflow-y: auto;
+  z-index: 100;
+  left: 50%;
+  transform: translateX(-50%);
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  display: none;
+}
+.search-preview .preview-item {
+  padding: 8px 16px;
+  cursor: pointer;
+}
+.search-preview .preview-item:hover {
+  background: #f1f1f1;
+}
+@media (max-width: 600px) {
+  .search-preview {
+    width: 95vw;
+    left: 2.5vw;
+    transform: none;
+  }
+}

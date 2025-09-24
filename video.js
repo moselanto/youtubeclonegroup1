@@ -37,3 +37,5 @@ document.querySelectorAll('.video-actions button').forEach(btn => {
     this.classList.add('active');
   });
 });
+
+

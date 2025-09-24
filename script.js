@@ -118,3 +118,48 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 });
 
+document.addEventListener('DOMContentLoaded', function () {
+  const searchInput = document.getElementById('searchInput');
+  const searchPreview = document.getElementById('searchPreview');
+
+  // Collect all video titles and their links
+  const videoCards = Array.from(document.querySelectorAll('.video-card-link'));
+  const videoData = videoCards.map(card => {
+    const titleElem = card.querySelector('.video-title');
+    return {
+      title: titleElem ? titleElem.textContent.trim() : '',
+      link: card.getAttribute('href')
+    };
+  });
+
+  searchInput.addEventListener('input', function () {
+    const query = this.value.trim().toLowerCase();
+    searchPreview.innerHTML = '';
+    if (!query) {
+      searchPreview.style.display = 'none';
+      return;
+    }
+    // Filter video titles
+    const matches = videoData.filter(v => v.title.toLowerCase().includes(query));
+    if (matches.length === 0) {
+      searchPreview.style.display = 'none';
+      return;
+    }
+    // Show preview
+    matches.slice(0, 7).forEach(match => {
+      const div = document.createElement('div');
+      div.className = 'preview-item';
+      div.textContent = match.title;
+      div.onclick = () => window.location.href = match.link;
+      searchPreview.appendChild(div);
+    });
+    searchPreview.style.display = 'block';
+  });
+
+  // Hide preview when clicking outside
+  document.addEventListener('click', function (e) {
+    if (!searchInput.contains(e.target) && !searchPreview.contains(e.target)) {
+      searchPreview.style.display = 'none';
+    }
+  });
+});
