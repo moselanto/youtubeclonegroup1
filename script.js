@@ -106,3 +106,15 @@ menuBtn.addEventListener("click", () => {
   content.classList.toggle("shifted");
 });
 
+
+document.addEventListener('DOMContentLoaded', () => {
+  const btn = document.querySelector('.show-more-btn');
+  if (btn) {                     // ✅ only run if the button exists
+    btn.addEventListener('click', () => {
+      document.querySelectorAll('.shorts-grid .short-card:nth-child(n + 5)')
+        .forEach(card => (card.style.display = 'block'));
+      btn.style.display = 'none';
+    });
+  }
+});
+
