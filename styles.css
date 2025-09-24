@@ -722,3 +722,37 @@ body {
   }
 }
 
+/* --- Shorts Layout --- */
+.shorts-section {
+  width: 100%;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.shorts-grid {
+  display: grid;
+  width: 100%;
+  gap: 16px;
+
+  /* 👇 Desktop: 5 equal columns */
+  grid-template-columns: repeat(5, 1fr);
+}
+
+/* Tablet: 3 columns */
+@media (max-width: 1024px) {
+  .shorts-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* Mobile: 2 columns */
+@media (max-width: 768px) {
+  .shorts-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  /* Hide anything after the 4th card until “Show more” */
+  .shorts-grid .short-card:nth-child(n + 5) {
+    display: none;
+  }
+}
