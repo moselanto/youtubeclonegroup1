@@ -687,3 +687,10 @@ body {
   color: #606060;
 }
 
+/* Force Shorts section to use the entire page width */
+.shorts-section {
+  width: 90vw;         /* full viewport width */
+  margin-left: calc(-19vw + 50%); /* pull it out of centered parent if needed */
+  padding: 20px 5vw;    /* optional side padding */
+  box-sizing: border-box;
+}
