@@ -576,17 +576,27 @@ body {
 
 /* ===== Mobile Bottom Nav ===== */
 .mobile-bottom-nav {
-  position: fixed;
+  position: fixed;        /* stays in place even when scrolling */
   bottom: 0;
   left: 0;
   right: 0;
   height: 56px;
   background: #fff;
   border-top: 1px solid #ddd;
-  display: none; /* hidden on desktop */
+  display: none;          /* hidden on desktop; revealed via media query */
   justify-content: space-around;
   align-items: center;
-  z-index: 1001; /* above content */
+  z-index: 9999;          /* keep it above everything */
+}
+
+@media (max-width: 768px) {
+  .mobile-bottom-nav {
+    display: flex;
+  }
+  /* prevent page content from hiding behind the nav */
+  body {
+    padding-bottom: 56px;  /* equal to nav height */
+  }
 }
 
 .mobile-bottom-nav .nav-item {
