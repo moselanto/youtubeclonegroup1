@@ -106,3 +106,26 @@ menuBtn.addEventListener("click", () => {
   content.classList.toggle("shifted");
 });
 
+document.addEventListener('DOMContentLoaded', () => {
+  const btn = document.querySelector('.show-more-btn');
+  btn?.addEventListener('click', () => {
+    document.querySelectorAll('.shorts-grid .short-card:nth-child(n + 5)')
+      .forEach(card => card.style.display = 'block');
+    btn.style.display = 'none'; // hide button after expanding
+  });
+});
+
+document.addEventListener('DOMContentLoaded', () => {
+  const menuBtn  = document.getElementById('menuBtn');
+  const drawer   = document.getElementById('drawer');
+  const overlay  = document.getElementById('overlay');
+
+  function toggleDrawer() {
+    drawer.classList.toggle('active');
+    overlay.style.display = drawer.classList.contains('active') ? 'block' : 'none';
+  }
+
+  menuBtn.addEventListener('click', toggleDrawer);
+  overlay.addEventListener('click', toggleDrawer);
+});
+
