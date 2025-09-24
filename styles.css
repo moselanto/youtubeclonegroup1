@@ -636,89 +636,6 @@ body {
 }
 
 
-/* Shorts section */
-.shorts-section {
-  /* optional: add top/bottom padding to match rest of site */
-  padding: 20px 0;
-}
-
-.shorts-heading {
-  font-size: 1.2rem;
-  font-weight: 600;
-  margin-bottom: 12px;
-}
-
-.shorts-grid {
-  display: grid;
-  grid-template-columns: repeat(5, 1fr); /* full 5 columns on desktop */
-  gap: 16px;
-  width: 100%;                           /* stretch to container width */
-}
-
-@media (max-width: 1024px) {
-  .shorts-grid {
-    grid-template-columns: repeat(3, 1fr);
-  }
-}
-
-@media (max-width: 768px) {
-  /* two columns on mobile */
-  .shorts-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-  /* hide anything after the 4th card */
-  .shorts-grid .short-card:nth-child(n + 5) {
-    display: none;
-  }
-}
-
-
-.short-card {
-  flex: 0 0 200px;            /* fixed width so they don’t stretch */
-  background: #fff;
-  border-radius: 8px;
-  overflow: hidden;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-}
-
-.short-card iframe {
-  width: 100%;
-  aspect-ratio: 9/16;
-  border: none;
-}
-
-.short-info {
-  padding: 8px;
-}
-
-.short-title {
-  font-size: 14px;
-  font-weight: 500;
-  margin-bottom: 4px;
-}
-
-.short-views {
-  font-size: 12px;
-  color: #606060;
-}
-
-
-  /* style the button */
-  .show-more-btn {
-    display: block;
-    margin: 16px auto 0;
-    padding: 10px 20px;
-    background: #e41e26;
-    color: #fff;
-    border: none;
-    border-radius: 20px;
-    font-size: 0.9rem;
-    cursor: pointer;
-  }
-}
-
-
 /* ✅ Shorts Section */
 .shorts-section {
   width: 100%;
@@ -740,6 +657,25 @@ body {
   gap: 16px;
   width: 100%;
 }
+
+@media (max-width: 1024px) {
+  .shorts-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  /* two columns on mobile */
+  .shorts-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  /* hide anything after the 4th card */
+  .shorts-grid .short-card:nth-child(n + 5) {
+    display: none;
+  }
+}
+
 
 /* Individual short card */
 .short-card {
@@ -765,9 +701,24 @@ body {
   margin: 0 0 4px;
 }
 
+
 .short-views {
   font-size: 12px;
   color: #666;
 }
 
+
+  /* style the button */
+  .show-more-btn {
+    display: block;
+    margin: 16px auto 0;
+    padding: 10px 20px;
+    background: #e41e26;
+    color: #fff;
+    border: none;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    cursor: pointer;
+  }
+}
 
