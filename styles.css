@@ -638,8 +638,8 @@ body {
 
 /* Shorts section */
 .shorts-section {
-  margin: 20px 0;
-  padding: 0 16px;
+  /* optional: add top/bottom padding to match rest of site */
+  padding: 20px;
 }
 
 .shorts-heading {
@@ -648,23 +648,23 @@ body {
   margin-bottom: 12px;
 }
 
-/* Make the Shorts layout responsive */
 .shorts-grid {
   display: grid;
-  grid-template-columns: repeat(5, 1fr);  /* five equal columns */
+  grid-template-columns: repeat(5, 1fr);
   gap: 16px;
 }
 
 @media (max-width: 1024px) {
   .shorts-grid {
-    grid-template-columns: repeat(3, 1fr); /* tablet */
+    grid-template-columns: repeat(3, 1fr);
   }
 }
 
 @media (max-width: 768px) {
   .shorts-grid {
-    grid-template-columns: repeat(2, 1fr); /* mobile */
+    grid-template-columns: repeat(2, 1fr);
   }
+}
 
 
 .short-card {
@@ -696,13 +696,6 @@ body {
   color: #606060;
 }
 
-/* Make the Shorts section span the full browser width */
-.shorts-section {
-  width: 100vw;                          /* full viewport width */
-  margin-left: calc(-25vw + 50%);         /* pull it out of centered wrapper */
-  padding: 20px 5vw;                      /* optional side padding */
-  box-sizing: border-box;
-}
 
   /* style the button */
   .show-more-btn {
