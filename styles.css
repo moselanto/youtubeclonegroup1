@@ -625,3 +625,50 @@ body {
   }
 }
 
+
+/* ===== Shorts Carousel ===== */
+.shorts-section {
+  margin: 24px 0;
+}
+
+.shorts-title {
+  font-size: 1.2rem;
+  font-weight: 600;
+  padding: 0 16px;
+  margin-bottom: 12px;
+}
+
+.shorts-container {
+  display: flex;
+  overflow-x: auto;
+  gap: 12px;
+  padding: 0 16px;
+  scroll-snap-type: x mandatory;
+}
+
+.shorts-container::-webkit-scrollbar {
+  display: none; /* hide scrollbar for cleaner look */
+}
+
+.shorts-card {
+  flex: 0 0 150px;          /* width of each short */
+  border-radius: 12px;
+  overflow: hidden;
+  scroll-snap-align: start;
+  background: #000;
+  text-align: center;
+}
+
+.shorts-card img,
+.shorts-card video {
+  width: 100%;
+  aspect-ratio: 9/16;
+  object-fit: cover;
+}
+
+.shorts-caption {
+  font-size: 0.9rem;
+  padding: 6px;
+  color: #333;
+}
+
