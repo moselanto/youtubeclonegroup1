@@ -118,17 +118,3 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 
-document.addEventListener('DOMContentLoaded', () => {
-  const menuBtn  = document.getElementById('menuBtn');
-  const drawer   = document.getElementById('drawer');
-  const overlay  = document.getElementById('overlay');
-
-  function toggleDrawer() {
-    drawer.classList.toggle('active');
-    overlay.style.display = drawer.classList.contains('active') ? 'block' : 'none';
-  }
-
-  menuBtn.addEventListener('click', toggleDrawer);
-  overlay.addEventListener('click', toggleDrawer);
-});
-
