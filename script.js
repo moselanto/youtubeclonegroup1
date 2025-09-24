@@ -106,7 +106,6 @@ menuBtn.addEventListener("click", () => {
   content.classList.toggle("shifted");
 });
 
-<script>
 document.addEventListener('DOMContentLoaded', () => {
   const btn = document.querySelector('.show-more-btn');
   btn?.addEventListener('click', () => {
@@ -115,4 +114,18 @@ document.addEventListener('DOMContentLoaded', () => {
     btn.style.display = 'none'; // hide button after expanding
   });
 });
-</script>
+
+document.addEventListener('DOMContentLoaded', () => {
+  const menuBtn  = document.getElementById('menuBtn');
+  const drawer   = document.getElementById('drawer');
+  const overlay  = document.getElementById('overlay');
+
+  function toggleDrawer() {
+    drawer.classList.toggle('active');
+    overlay.style.display = drawer.classList.contains('active') ? 'block' : 'none';
+  }
+
+  menuBtn.addEventListener('click', toggleDrawer);
+  overlay.addEventListener('click', toggleDrawer);
+});
+
