@@ -108,12 +108,15 @@ menuBtn.addEventListener("click", () => {
 
 document.addEventListener('DOMContentLoaded', () => {
   const btn = document.querySelector('.show-more-btn');
-  btn?.addEventListener('click', () => {
-    document.querySelectorAll('.shorts-grid .short-card:nth-child(n + 5)')
-      .forEach(card => card.style.display = 'block');
-    btn.style.display = 'none'; // hide button after expanding
-  });
+  if (btn) {                     // ✅ only run if the button exists
+    btn.addEventListener('click', () => {
+      document.querySelectorAll('.shorts-grid .short-card:nth-child(n + 5)')
+        .forEach(card => (card.style.display = 'block'));
+      btn.style.display = 'none';
+    });
+  }
 });
+
 
 document.addEventListener('DOMContentLoaded', () => {
   const menuBtn  = document.getElementById('menuBtn');
