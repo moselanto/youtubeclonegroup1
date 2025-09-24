@@ -338,11 +338,15 @@ body {
 
 /* Shorts container should fill the whole screen below the top bar */
 .shorts-container {
-  height: calc(100vh - 56px);   /* 56px = topbar height */
-  overflow-y: auto;
+  position: relative;
+  width: 100%;
+  height: 100vh;               /* full device height */
+  overflow-y: scroll;
   scroll-snap-type: y mandatory;
-  background: #fff;
-  padding-top: 56px;            /* keeps first card clear of topbar */
+  -webkit-overflow-scrolling: touch;
+  background: #000;            /* black background like YouTube */
+  padding: 0;                  /* remove any extra spacing */
+  margin: 0;
 }
 
 
@@ -354,25 +358,23 @@ body {
   /* Remove manual transforms/transition for slider */
 }
 
+/* Each short takes up exactly one viewport */
 .shorts-card {
-  background: #000;
-  width: 360px;
-  height: 640px;
-  border-radius: 12px;
-  overflow: hidden;
+  width: 100%;
+  height: 100vh;
+  scroll-snap-align: start;
   position: relative;
   display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
+  justify-content: center;
   align-items: center;
-  margin-bottom: 20px; /* space between cards */
-  scroll-snap-align: start; /* snap behaviour */
+  background: #000;
 }
 
-.video {
+/* The <video> itself fills the screen and stays centered */
+.shorts-card video {
   width: 100%;
-  height: 85%;
-  object-fit: cover;
+  height: 100%;
+  object-fit: cover;           /* crops/zooms to cover the whole screen */
 }
 
 /* ────────────── Video Details ────────────── */
