@@ -263,8 +263,8 @@ img {
   flex-shrink: 1;
   flex-basis: auto;
   border-radius: 10px;
-  width: 100%;
-  height: auto;
+  width: 600px;
+  height: 300px;
 }
 
 .polygon-20-33 {
@@ -305,8 +305,8 @@ img {
   flex-shrink: 1;
   flex-basis: auto;
   border-radius: 10px;
-  width: 100%;
-  height: auto;
+  width: 600px;
+  height: 300px;
 }
 
 .polygon-19-37 {
@@ -335,12 +335,16 @@ img {
   flex-direction: row;
   justify-content: flex-start;
   align-items: flex-end;
-  gap: 35px;
+  gap: 30px;
   padding: 20px 30px 20px 30px;
+  margin: 30px;
   flex-grow: 0;
   flex-shrink: 1;
   flex-basis: auto;
+  width: 100%;
+  height: auto;
 }
+
 
 .text-40 {
   flex-grow: 0;
@@ -359,8 +363,8 @@ img {
   flex-shrink: 1;
   flex-basis: auto;
   border-radius: 10px;
-  width: 100%;
-  height: auto;
+  width: 600px;
+  height: 300px;
 }
 
 .polygon-18-42 {
@@ -401,8 +405,8 @@ img {
   flex-shrink: 1;
   flex-basis: auto;
   border-radius: 10px;
-  width: 100%;
-  height: auto;
+  width: 600px;
+  height: 300px;
 }
 
 .polygon-17-46 {
@@ -431,12 +435,16 @@ img {
   flex-direction: row;
   justify-content: flex-start;
   align-items: flex-end;
-  gap: 35px;
+  gap: 30px;
   padding: 20px 30px 20px 30px;
+  margin: 30px;
   flex-grow: 0;
   flex-shrink: 1;
   flex-basis: auto;
+  width: 100%;
+  height: auto;
 }
+
 
 .rectangle-94-47 {
   flex-grow: 0;
@@ -636,17 +644,16 @@ img {
   flex-shrink: 1;
   flex-basis: auto;
 }
-
-.library-history-1-1 {
+.library-history-container {
 @media (max-width: 1440px) {
-  .library-history-1-1 {
+  .library-history-container {
     padding-left: 24px;
     padding-right: 24px;
   }
 }
 
 @media (max-width: 768px) {
-  .library-history-1-1 {
+  .library-history-container {
     padding-left: 16px;
     padding-right: 16px;
   }
