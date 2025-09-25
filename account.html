@@ -4,70 +4,136 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>YouTube Subscriptions Clone</title>
+  <title>YouTube Account</title>
   <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="styles.css" />
   <link rel="stylesheet" href="account.css" />
 </head>
 
 <body>
-  <header class="header">
-    <div class="logo">
+  <header class="mobile-header">
+    <div class="mobile-logo">
       <img src="assets/Favicon.png" alt="YouTube Logo" class="logo-img" />
-      <h1>Subscriptions</h1>
+      <h1>YouTube</h1>
+    </div>
+    <div class="mobile-icons">
+      
+      <img src="assets/man-user-circle-icon.png" alt="Profile Icon" class="profile-img" />
     </div>
   </header>
 
-  <div class="layout">
-    <aside class="sidebar">
-      <a href="index.html"><span class="icon">🏠</span>Home</a>
-      <a href="shorts.html"><span class="icon">🎬</span>Shorts</a>
-      <a href="./account.html" class="active"><span class="icon">📺</span>Subs</a>
-      <a href="library.html"><span class="icon">📚</span>Library</a>
-    </aside>
-    <main class="content">
-      <section class="subscriptions-list">
-        <article class="subscription-card">
-          <img src="assets/man-user-circle-icon.png" alt="Channel Avatar" class="channel-avatar" />
-          <div class="subscription-info">
-            <h2 class="channel-name">Group One</h2>
-            <p class="channel-handle">@Groupone</p>
-            <p class="channel-description">Manage your Google Account</p>
+  <main class="mobile-content">
+    <section class="history-section">
+      <div class="history-header">
+        <h2>History</h2>
+        <a href="#" class="view-all-link">View all</a>
+      </div>
+      <div class="history-videos">
+        <!-- Embedded playable YouTube videos -->
+        <article class="history-video-card">
+          <iframe width="150" height="90" src="https://www.youtube.com/embed/ScMzIvxBSi4" title="Traveling across the world" frameborder="0" allowfullscreen></iframe>
+          <div class="video-info">
+            <h3>Traveling across the world</h3>
+            <p>Group One</p>
+            <p>1M views • 5 year ago</p>
           </div>
         </article>
-
-        <article class="subscription-card">
-          <img src="assets/youtube-shorts-icon.png" alt="Channel Avatar" class="channel-avatar" />
-          <div class="subscription-info">
-            <h2 class="channel-name">YouTube Shorts</h2>
-            <p class="channel-handle">@Shorts</p>
-            <p class="channel-description">Short videos from your subscriptions</p>
+        <article class="history-video-card">
+          <iframe width="150" height="90" src="https://www.youtube.com/embed/ysz5S6PUM-U" title="Beginning your cooking" frameborder="0" allowfullscreen></iframe>
+          <div class="video-info">
+            <h3>Beginning your cooking</h3>
+            <p>Kelvin Stratvert</p>
+            <p>2M views • 3 year ago</p>
           </div>
         </article>
-
-        <article class="subscription-card">
-          <img src="assets/Favicon.png" alt="Channel Avatar" class="channel-avatar" />
-          <div class="subscription-info">
-            <h2 class="channel-name">YouTube Premium</h2>
-            <p class="channel-handle">@Premium</p>
-            <p class="channel-description">Get YouTube Premium benefits</p>
+        <article class="history-video-card">
+          <iframe width="150" height="90" src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="Easiest BBQ Sauce ever" frameborder="0" allowfullscreen></iframe>
+          <div class="video-info">
+            <h3>Easiest BBQ Sauce ever</h3>
+            <p>Startup Box</p>
+            <p>570 views • 2 year ago</p>
           </div>
         </article>
+      </div>
+    </section>
 
-        
-      </section>
-    </main>
-  </div>
+    <section class="your-videos-movies">
+      <a href="#" class="text-link">Your videos</a>
+      <a href="#" class="text-link">Your movies</a>
+    </section>
 
-  
-  <footer class="bottom-nav">
+    <section class="playlists-section">
+      <h2>Playlists</h2>
+      <div class="playlists-list">
+        <article class="playlist-card">
+          <iframe width="130" height="75" src="https://www.youtube.com/embed/ScMzIvxBSi4" title="Liked Videos" frameborder="0" allowfullscreen></iframe>
+          <div class="playlist-info">
+            <h3>Liked Videos</h3>
+            <p>Private</p>
+          </div>
+        </article>
+        <article class="playlist-card">
+          <iframe width="130" height="75" src="https://www.youtube.com/embed/ysz5S6PUM-U" title="Colorful arts" frameborder="0" allowfullscreen></iframe>
+          <div class="playlist-info">
+            <h3>Colorful arts</h3>
+            <p>Channel Name</p>
+          </div>
+        </article>
+        <article class="playlist-card">
+          <iframe width="130" height="75" src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="Figma Tutorial for Beginners" frameborder="0" allowfullscreen></iframe>
+          <div class="playlist-info">
+            <h3>Figma Tutorial for Beginners</h3>
+            <p>Louis Vuitton</p>
+          </div>
+        </article>
+        <article class="playlist-card">
+          <iframe width="130" height="75" src="https://www.youtube.com/embed/ScMzIvxBSi4" title="World Without Cows - A Documentary Film" frameborder="0" allowfullscreen></iframe>
+          <div class="playlist-info">
+            <h3>World Without Cows - A Documentary Film</h3>
+            <p>Johnson & Johnson</p>
+          </div>
+        </article>
+        <article class="playlist-card">
+          <iframe width="130" height="75" src="https://www.youtube.com/embed/ysz5S6PUM-U" title="Starting your traveling blog with group1" frameborder="0" allowfullscreen></iframe>
+          <div class="playlist-info">
+            <h3>Starting your traveling blog with group1</h3>
+            <p>Johnson & Johnson</p>
+          </div>
+        </article>
+        <article class="playlist-card">
+          <iframe width="130" height="75" src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="Starting your Sewing journey today" frameborder="0" allowfullscreen></iframe>
+          <div class="playlist-info">
+            <h3>Starting your Sewing journey today</h3>
+            <p>Johnson & Johnson</p>
+          </div>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer class="mobile-bottom-nav">
     <nav>
-      <a href="index.html">Home</a>
-      <a href="shorts.html">Shorts</a>
-      <a href="account.html" class="active">Subscriptions</a>
-      <a href="library.html">Library</a>
+      <a href="index.html" class="nav-item">
+        <img src="assets/Home.svg" alt="Home" />
+        <span>Home</span>
+      </a>
+      <a href="shorts.html" class="nav-item">
+        <img src="assets/youtube-shorts-icon.png" alt="Shorts" />
+        <span>Shorts</span>
+      </a>
+      <a href="library.html" class="nav-item">
+        <img src="assets/Downloads.svg" alt="Library" />
+        <span>Library</span>
+      </a>
+      <a href="account.html" class="nav-item">
+        <img src="assets/Subscribe.svg" alt="Subscription" />
+        <span>Subscription</span>
+      </a>
+      <a href="account.html" class="nav-item active">
+        <img src="assets/man-user-circle-icon.png" alt="You" />
+        <span>You</span>
+      </a>
     </nav>
   </footer>
 </body>
 
-</html>
+</html>  
