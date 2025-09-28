@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>YouTube Customization Page</title>
+  <link href="https://fonts.googleapis.com/css?family=Inter&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="custom.css" />
+</head>
+<body>
+  <!-- Header -->
+  <header class="header">
+    <img src="custom_images/node-2.png" alt="YouTube Logo" class="logo" />
+    <h1>Customize Feeds</h1>
+  </header>
+
+  <!-- Main Layout -->
+  <main class="layout">
+    <aside class="sidebar">
+      <h2>Categories</h2>
+      <label><input type="checkbox" class="feed-checkbox" value="gaming" checked /> Gaming</label>
+      <label><input type="checkbox" class="feed-checkbox" value="music" /> Music</label>
+      <label><input type="checkbox" class="feed-checkbox" value="news" /> News</label>
+
+      <h2>Settings</h2>
+      <label><input type="checkbox" id="autoplay" /> Autoplay</label>
+      <label><input type="checkbox" id="playback" /> Default Playback</label>
+
+      <button id="saveBtn">Save Customization</button>
+      <p class="save-message hidden">Customization saved! <span id="undoBtn">UNDO</span></p>
+    </aside>
+
+    <!-- Video Feed -->
+    <section class="feed" id="videoFeed">
+      <article class="video-card gaming">
+        <img src="custom_images/video-thumbnail-26.png" alt="Video thumbnail" />
+        <h3>Transform your future with UI/UX Design</h3>
+        <p>Muringa • 247k views • 1 year ago</p>
+      </article>
+
+      <article class="video-card music">
+        <img src="custom_images/video-thumbnail-34.png" alt="Video thumbnail" />
+        <h3>Transform your future with Software Engineering</h3>
+        <p>Muringa • 1M views • 2 years ago</p>
+      </article>
+
+      <!-- You can duplicate <article> for more videos -->
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html> 

@@ -162,4 +162,20 @@ document.addEventListener('DOMContentLoaded', function () {
       searchPreview.style.display = 'none';
     }
   });
+}); 
+
+chips.forEach(chip => {
+  chip.addEventListener("click", () => {
+    document.querySelector(".chip.active")?.classList.remove("active");
+    chip.classList.add("active");
+    const selectedCategory = chip.textContent.trim();
+    document.querySelectorAll('.video-card-link').forEach(card => {
+      const cardCategory = card.getAttribute('data-category');
+      if (selectedCategory === "All" || cardCategory === selectedCategory) {
+        card.style.display = '';
+      } else {
+        card.style.display = 'none';
+      }
+    });
+  });
 });
